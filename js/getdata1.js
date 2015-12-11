@@ -6,6 +6,8 @@ var subTotal2;
 var total2;
 var tax;
 var tips;
+
+var clickBillPhotoTime=0;
 function allowDrop(ev) {
     ev.preventDefault();
 }
@@ -60,6 +62,7 @@ function dropDivide(){
 
 
 function showBill(num){
+  clickBillPhotoTime=0;
   $("#billList").html("");
   $("#billShare").html("<div class='billDrop' id='billDrop1' ondrop='drop(event)' ondragover='allowDrop(event)'>Drop1</div><span id='devideDrop1' class='total'></span><div class='billDrop' id='billDrop2' ondrop='drop(event)' ondragover='allowDrop(event)'>Drop2</div><span id='devideDrop2' class='total'></span><div class='billDrop' id='billDrop3' ondrop='drop(event)' ondragover='allowDrop(event)'>Drop3</div><span id='devideDrop3' class='total'></span><div><button type='button' class='btn btn-warning divideButton' onclick='dropDivide()'>Divide</button></div>");
   $("#devideTotal").text("");
@@ -77,6 +80,23 @@ query.get(billObjectId[num], {
 
         var createdAt = bill.createdAt;
           $("#billList").append("<p>"+ createdAt +"</p><hr>");
+
+
+        (function($) {
+            $(".billPhoto").html(
+      
+              (bill.get('instacheckImg'))?
+              '<div><img class="imground" src="' + bill.get('instacheckImg')._url + '"></div>':
+              '<div>no image</div>'
+            );
+            })(jQuery); 
+
+            $( ".billPhoto" ).hide();
+
+
+
+
+
 
         var items = bill.get("instacheckItems");
         var price = items.split(/(\d+.\d+)/g);
@@ -161,6 +181,23 @@ query.get(billObjectId[num], {
 });
 };
 
+$("#showBillPhoto").on("click",function(){
+  if(clickBillPhotoTime%2==0){
+    $(".billPhoto").show();
+    $("#showBillPhoto").text("Hide Bill Photo");
+  }else if(clickBillPhotoTime%2==1){
+    $(".billPhoto").hide();
+    $("#showBillPhoto").text("Show Bill Photo");
+  }
+  clickBillPhotoTime++;
+});
+
+
+
+
+
+
+
 $(".divideButton").on("click",function(){
 
   var dividePeople = parseInt($(this).val());
@@ -217,6 +254,7 @@ $(function() {
 
       $("#sign_out").on("click",function(){
         localStorage.username = "";
+        Parse.User.logOut();
         window.location.replace("index.html");
       });
 

@@ -79,6 +79,11 @@ $(function(){
        			window.location.replace("data2.html");
   	 		},
   	 		error: function(user,error){
+  	 			if (error.code == 209) {    
+				    Parse.User.logOut();
+				    user.logIn(loginCallback);
+				    return;
+					}
   	 			$("#signinwarming").show().text("Wrong username or password");
   	 			console.log(error);
   	 		}
