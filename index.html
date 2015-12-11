@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	
+	<title>BillBo</title>
+	
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+	<link rel="stylesheet" href="css/animate.css">
+	<link rel="stylesheet" href="css/style.css">
+	
+	<link href='https://fonts.googleapis.com/css?family=Roboto:100,300,400,700|Paytone+One' rel='stylesheet' type='text/css'>
+</head>
+<body>
+
+<header>
+	<nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+		<div class="container">
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#myNavbar">
+          			<span class="sr-only">Toggle navigation</span>
+         			<span class="icon-bar"></span>
+          			<span class="icon-bar"></span>
+         			<span class="icon-bar"></span>
+        		</button>
+				<a class="navbar-brand" href="#home"><h1 class="yellow">BillBo <span class="subhead">Split Your Bills</span></h1></a>
+			</div>
+			 <div class="collapse navbar-collapse" id="myNavbar">
+				<ul class="nav navbar-nav">
+					<li class="active"><a href="#home">Home</a></li>
+					<li><a href="#about">About</a></li>
+					<li><a href="#services">Services</a></li>
+				    <li><a href="#download">Download</a></li>
+				</ul>	
+				<ul class="nav navbar-nav navbar-right">
+					<li><span>Hi, guest!</span></li>
+					<li>  <button type="button" class="btn btn-warning " data-toggle="modal" data-target="#signIn">Sign In</button></li>
+				</ul>
+
+			</div>
+		</div>	
+	</nav>
+</header>
+
+
+<!-- Sign In -->
+
+<div class="modal fade" id="signIn" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+	<div class="modal-dialog" role="document">
+	    <div class="modal-content">
+		    <div class="modal-header">
+		        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+		        <h3 class="modal-title" id="myModalLabel">Sign In</h3>
+		    </div>
+			<div class="modal-body">
+			    <form id="signInForm" name="signInForm" role="form">
+			        <label for="signInUsername">Username </label>
+			        <input type="text" class="form-control" id="signInUsername" name="signInUsername" placeholder="Username" required="" autofocus="">
+			        <a class="pull-right" href="#">Forgot password?</a>
+			        <label for="signInPassword">Password</label>
+			        <input type="password" class="form-control" id="signInPassword" name="signInPassword" placeholder="Password" required="">
+			        
+			        <div class="checkbox pull-right">
+			        	<label><input type="checkbox">Remember me </label>
+			        </div>
+
+			        <button type="submit" class="btn btn-primary btn-lg btn-block">Log In</button>
+			    </form>
+			</div>
+			<div class="modal-footer">
+	      		<span>Don't have an account? 
+	      			<button type="submit" class="btn btn-link " data-toggle="modal" data-target="#signUp ">Sign Up</button>
+	      		</span><br>
+	      	</div>
+			
+	    </div>
+  	</div>
+</div>
+
+
+
+<!-- Sign Up -->
+
+<div class="modal fade" id="signUp" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+	<div class="modal-dialog" role="document">
+	    <div class="modal-content">
+		    <div class="modal-header">
+		        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+		        <h3 class="modal-title" id="myModalLabel">Sign Up</h3>
+		    </div>
+	      	<div class="modal-body">
+				<form id="signUpForm" name="signUpForm" role="form">
+					<label for="SignUpUsername">Username </label>
+			        <input type="text" class="form-control" id="SignUpUsername" name="SignUpUsername" placeholder="Username" required="" autofocus="">
+			        <label for="signUpEmail">Email </label>
+			        <input type="email" class="form-control" id="signUpEmail" name="signUpEmail" placeholder="Email" required="" autofocus="">
+			        <label for="signUpPassword">Password </label>
+			        <input type="password" class="form-control" id="signUpPassword" name="signUpPassword" placeholder="Password" required="" autofocus=""><br>
+					
+	        		<button type="submit" class="btn btn-primary btn-lg btn-block">Sign Up</button>
+				</form>
+	      	</div>
+	      	<div class="modal-footer">
+	      		<span>Have an account? 
+	      			<button type="submit" class="btn btn-link " data-toggle="modal" data-target="#signIn ">Sign In</button>
+	      		!</span><br>
+	      	</div>
+	    </div>
+  	</div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+<div class="main">
+	<div class="bigimage " id="home">
+    	<div class="content container">
+    		<div class="row">
+    			<div class="show col-lg-8 col-md-8 animated bounceIn">
+    				<img src="images/billbo_big.png" alt="">
+    			</div>
+				<div class="show col-lg-4 col-md-4 animated bounceInDown">
+					<h2 class="orange">Split The Bills!</h2>
+						<p>For every bill you’ll split, BillBo is the sevice to get it done.</p>
+						<button type="button" class="btn btn-warning btn-block btn-lg" data-toggle="modal" data-target="#signUp">Sign Up</button>
+				</div>
+    		</div>
+			
+		</div>
+  	</div>
+	<div class="page" id="about">
+		<div class="content container">
+			<h2>What is BillBo</h2>
+				<img src="images/billbo_icon.png" alt="">
+			<div class="row">
+				<p class="col-md-offset-1 col-md-5 col-sm-offset-1 col-sm-10">BillBo is a Providence, RI based company that makes it easy to split bills with friends and family. We organize all your shared expenses and IOUs in one place, so that everyone can see who they owe. Whether you are sharing a ski vacation, splitting rent with roommates, or owe someone for lunch, BillBo makes life easier. We store data “in the cloud,” so that you can access it anywhere: on iPhone, Android, or on your computer.</p>
+
+				<p class="col-md-offset-0 col-md-5 col-sm-offset-1 col-sm-10">Most people want to be fair to each other, but sometimes they forget, or can’t decide on what fair is. In addition to helping people honor their debts, we provide mediation advice about fairness issues through our “fairness calculators.” These calculators turn our crowdsourced data into a neutral fairness opinion about your personal situation.</p>
+			</div>
+			
+			
+		</div>
+	</div>
+
+	<div class="page" id="services">
+		<div class="content container">
+			<h2>Services</h2>
+			<div class="row">
+				<div class="service col-lg-3 col-md-3 col-sm-offset-0 col-sm-6 col-xs-offset-1 col-xs-10">
+					<h1 class="icon ">&#xe029;</h1>
+					<h3>Analysis</h3>
+					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam facilisis tincidunt ex.</p>
+				</div>
+				<div class="service col-lg-3 col-md-3 col-sm-offset-0 col-sm-6 col-xs-offset-1 col-xs-10">
+					<h1 class="icon ">&#xe003;</h1>
+					<h3>In Cloud</h3>
+					<p>Quisque interdum massa quam, sed faucibus leo laoreet egestas. </p>
+				</div>
+				<div class="clearfix visible-sm-block"></div>
+				<div class="service col-lg-3 col-md-3 col-sm-offset-0 col-sm-6 col-xs-offset-1 col-xs-10">
+					<h1 class="icon ">&#xe0ed;</h1>
+					<h3>Save Money</h3>
+					<p>Donec condimentum sit amet lacus nec eleifend. Aenean blandit a ex in euismod.</p>
+				</div>
+				<div class="service col-lg-3 col-md-3 col-sm-offset-0 col-sm-6 col-xs-offset-1 col-xs-10">
+					<h1 class="icon ">&#xe026;</h1>
+					<h3>Friend List</h3>
+					<p>Curabitur tincidunt odio ex, nec tristique nulla mattis consequat. Nam consequat congue pulvinar.</p>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+	<div class="page" id="download">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-offset-2 col-lg-5 col-md-offset-0 col-md-6 col-sm-6 hidden-xs">
+					<img src="images/billbo_mainpage_04.png" alt="" class="rounded-corner">
+				</div>
+				<div class="col-lg-4 col-md-6 col-sm-6">
+					<h2>Download BillBo</h2>
+					<p>Most people want to be fair to each other, but sometimes they forget, or can’t decide on what fair is. In addition to helping people honor their debts, we provide mediation advice about fairness issues through our “fairness calculators.” These calculators turn our crowdsourced data into a neutral fairness opinion about your personal situation.</p>
+				</div>
+			</div>
+		</div>
+	</div>
+
+<footer class="bg-blue">
+	<div class="content container-fluid">
+		<div class="row">
+		<div class="col-sm-6">	
+			<h1 class="yellow ">Billbo</h1>
+			<p >3680 Market Street, Unit 414, San Francisco, CA 94538, USA <br>+1(123)456-7890</p>
+		</div>	
+		<div class="col-sm-6">
+			<nav class="navbar navbar-default" role="navigation">
+					<ul class="nav navbar-nav navbar-right">
+						<li><a href="#" class="light-blue">Home</a></li>
+						<li><a href="#" class="light-blue">Blog</a></li>
+						<li><a href="#" class="light-blue">Team</a></li>
+						<li><a href="#" class="light-blue">Jobs</a></li>
+						<li><a href="#" class="light-blue">Contact Us</a></li>
+					</ul>		
+			</nav>
+		</div>	
+	</div>
+		<p class="text-center light-blue">Copyright © BillBo 2015. All Rights Reserved.</p>
+	</div>
+</footer>
+
+
+	<script src="js/jquery.min.js"></script>
+	<script src="js/parse-1.6.4.min.js"></script>
+	<script src="js/jquery-2.1.4.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+	<script src="js/script.js"></script>
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-69922100-1', 'auto');
+  ga('send', 'pageview');
+
+</script>	
+</body>
+</html>

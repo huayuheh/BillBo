@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>BillBo</title>
+	
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+	<link rel="stylesheet" href="css/animate.css">
+	<link rel="stylesheet" href="css/style.css">
+
+	<link href='https://fonts.googleapis.com/css?family=Roboto:100,300,400,700|Paytone+One' rel='stylesheet' type='text/css'>
+
+
+
+
+</head>
+<body>
+<header>
+	<nav class="navbar navbar-default navbar-fixed-top inbody" role="navigation">
+		<div class="container">
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#myNavbar2">
+          			<span class="sr-only">Toggle navigation</span>
+         			<span class="icon-bar"></span>
+          			<span class="icon-bar"></span>
+         			<span class="icon-bar"></span>
+        		</button>
+				<a class="navbar-brand" href="index.html"><h1 class="yellow">BillBo <span class="subhead">Split Your Bills</span></h1></a>
+			</div>
+			 <div class="collapse navbar-collapse" id="myNavbar2">
+				<ul class="nav navbar-nav">
+					<li ><a href="#home">Setting</a></li>
+					<li class="active"><a href="#about">Bill</a></li>
+				</ul>	
+				<ul class="nav navbar-nav navbar-right">
+					<li><span>Welcome, <span id="username"> </span></span></li>
+					<li>  <button type="button" class="btn btn-warning " id="sign_out">Sign Out</button></li>
+				</ul>
+			</div>
+		</div>	
+	</nav>
+</header>
+
+
+
+
+<div class="page">
+	<div class="content container">
+		<div class="row">
+			<h1 class="name">Test</h1>
+			<ul class="pager">
+
+			</ul>
+		</div>
+		<div class="row">
+			<div class="col-xs-12 col-sm-6 col-md-6">
+				<div class="bill">
+					<div id='billList'>	
+
+					</div>		
+				</div>
+			</div>
+			
+			<div class="col-xs-12 col-sm-6 col-md-6">
+				<div class="bill">
+					<h3>Split The Bill</h3>
+					
+						
+						<h4>Split by people</h4>
+							<div id="divide">
+								<div class="btn-group btn-group-lg">
+								<button type="button" class="btn btn-warning divideButton" value="2">Split 2</button>
+								<button type="button" class="btn btn-warning divideButton" value="3">Split 3</button>
+								<button type="button" class="btn btn-warning divideButton" value="4">Split 4</button>
+								</div>
+								<div id="devideTotal" class='total'>divide total</div>
+
+							</div>
+						
+						
+							<h4>Split by dish</h4>
+								
+							<div id="billShare">
+								
+							</div>
+						
+					
+				</div>
+			</div>	
+			<div class="col-xs-12 col-sm-6 col-md-6">
+				<div class='bill'>
+					<h3>Chart for Bill</h3>
+					<div id="billChart"></div>
+				</div>
+				
+				
+
+
+			
+
+
+
+
+
+
+		</div>
+		
+
+
+	</div>	
+</div>
+
+
+
+
+
+	
+	<script src="js/jquery-2.1.4.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+	
+	<script src="http://www.parsecdn.com/js/parse-1.6.4.min.js"></script>
+
+	<script src="js/getdata1.js"></script>
+
+	<script src="https://code.highcharts.com/highcharts.js"></script>
+	<script src="https://code.highcharts.com/modules/exporting.js"></script>
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-69922100-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+	
+</body>
+</html>

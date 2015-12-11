@@ -1,0 +1,499 @@
+/*FONT for Icon*/
+@font-face {
+  	font-family: 'ElegantIcons';
+ 	src:url('../fonts/ElegantIcons.eot');
+  	src:url('../fonts/ElegantIcons.eot?#iefix') format('embedded-opentype'),
+    	url('../fonts/ElegantIcons.woff') format('woff'),
+  	  	url('../fonts/ElegantIcons.ttf') format('truetype'),
+ 	   	url('../fonts/ElegantIcons.svg#ElegantIcons') format('svg');
+  	font-weight: normal;
+  	font-style: normal;
+}
+
+/*Google Font*/
+	@import url(https://fonts.googleapis.com/css?family=Roboto:100,300,400,700|Paytone+One);
+
+	/*font-family: 'Roboto', sans-serif; other*/
+	/*font-family: 'Paytone One', sans-serif; Title*/
+
+
+/*media*/
+
+
+
+
+
+
+
+
+/*Custom Color*/
+	/*text color*/
+	.white{
+		color: #eee;
+	}
+	.light-blue{
+		color: #00ABD8;
+	}
+	.blue{
+		color: #005BAC;
+	}
+	.yellow{
+	    color:#EFC028;
+	}
+	.orange{
+		color: #F2572D;
+	}
+	.black{
+		color: #404041;
+	}
+
+	/*background color*/
+	.bg-blue{
+		background-color: #005BAC;
+	}
+	.bg-white{
+		background-color: #eee;
+	}
+	.bg-light-blue{
+		background-color: #00ABD8;
+	}
+	.bg-black{
+		background-color: #404041;
+	}
+
+
+
+/* Basic Page setting*/
+body{
+	padding-top: 50px;
+	font-family: 'Roboto', sans-serif;
+	font-weight: 400;
+	font-size: 2em;
+	position: relative;	
+	padding: 0;
+}
+
+h1, h2, h3 {
+	font-family: 'Paytone One', sans-serif;
+	margin: 0;
+}
+
+h2{
+	font-size: 2em;
+	color:#EFC028;
+}
+img{
+	width: 100%;
+}
+p{
+	font-weight: 300;
+}
+
+
+
+/*Btn*/
+
+.btn-link{
+	font-weight: 400;
+	font-size: 1em;
+	padding: 0px;
+	margin-top: -8px;
+	color: #EFC028;
+}
+.btn-link:hover{
+	color: #F2572D;
+}
+.btn-custom{
+	margin-left:1em;
+  	margin-bottom: 1em;
+  	background-color: #00ABD8;
+  	background-repeat: repeat-x;
+  	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#0cb915", endColorstr="#0cb915");
+    background-image: background-image: -webkit-linear-gradient(#0cb915, #0cb915);
+    background-image: background-image: -o-linear-gradient(#0cb915, #0cb915);
+    background-image: background-image: linear-gradient(#0cb915, #0cb915);
+ 	border-color: #0cb915 #0cb915 hsl(123, 87%, 39%);
+  	color: #fff !important;
+  	text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.00);
+  	-webkit-font-smoothing: antialiased;
+ 	border-radius: 50px;
+
+}
+
+
+
+
+
+
+/* Header Navigation*/
+header .navbar {
+	padding: 10px 0;
+}
+
+header .navbar-default {
+  background-color: transparent;
+  border: none;
+}
+
+header .navbar-nav{
+	padding-top:1.5em;
+}
+
+	header .navbar-default .navbar-nav a {
+		color: white;
+		padding: 13px 8px 2px;
+	}
+	header .navbar-default .navbar-nav span {
+		display: inline-block;
+		padding: 5px 8px 2px;
+		font-weight: 300;
+		color: #00ABD8;
+
+	}
+
+
+	header .navbar-default .navbar-nav a:hover {
+		color:#EFC028;
+	}
+
+	header .navbar-default .navbar-nav .active a {
+		font-weight: 700;
+		color:#EFC028;
+		background: transparent;
+		border-bottom: 2px solid #EFC028;
+		text-shadow: none;
+	}
+
+	header .navbar-default .navbar-nav .active a:hover {
+		color: #F2572D;
+		background: transparent;
+		text-shadow: none;
+	}
+
+	/*navbar brand*/
+	header .navbar-brand {
+		background: url(../images/billbo_icon.png);
+		background-size: auto 100%;
+		background-repeat: no-repeat;
+		margin-left:15px;
+		height: auto;
+	}
+		header .navbar-brand h1{
+			color:#EFC028;
+			font-size: 1.5em;
+			padding-left: 80px;
+		}
+		header .navbar-brand span.subhead {
+			display: block;
+			color: #F2572D;
+			font-family: 'Roboto', sans-serif;
+			font-size: .3em;
+			padding: .1em 0 0;
+			font-weight: 300;
+		}
+	
+
+	/*Navbar Toggle*/
+	header .navbar-default .navbar-toggle {
+		background-color: #EFC028;
+	}
+
+		header .navbar-default .navbar-toggle:hover{
+			background-color: #F2572D;
+		}
+
+		header .navbar-default .navbar-toggle .icon-bar {
+  			background-color: white;
+		}
+	
+	@media only screen
+		and (max-width: 768px) {
+  		header .navbar-collapse.in {
+    		background-color: rgba(0,0,0, .5);
+  		}  		
+	}
+
+	/*nav inbody*/
+	header .inbody{
+		background: #00ABD8;
+	}
+	header .inbody .navbar-brand{
+		padding: 0 0;
+	}
+
+		header .inbody .navbar-brand h1{
+			font-size: 2em;
+			padding-left: 45px;
+		}
+
+		header .inbody .navbar-brand span.subhead {
+	  		display: none;
+		}
+	header .inbody .navbar-nav{
+		padding-top: .0em;
+	}
+		header .inbody .navbar-nav span {
+	  		color: #005BAC;
+		}
+	
+	@media only screen
+		and (max-width: 768px) {
+  		header .inbody .navbar-nav span{
+			color: #00ABD8;
+  		}
+	}
+	
+
+
+/*modal*/
+.modal-content{
+	padding: 20px;
+
+}
+.modal-dialog{
+	width: 38F0px;
+}
+
+.login-or {
+    position: relative;
+    font-size: 18px;
+    color: #aaa;
+    margin-top: 10px;
+            margin-bottom: 10px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+.span-or {
+    display: block;
+    position: absolute;
+    left: 50%;
+    top: -2px;
+    margin-left: -25px;
+    background-color: #fff;
+    width: 50px;
+    text-align: center;
+}
+.hr-or {
+    background-color: #cdcdcd;
+    height: 1px;
+    margin-top: 0px !important;
+    margin-bottom: 0px !important;
+}
+h3{
+    text-align: center;
+    line-height: 300%;
+}
+
+#signinwarming{
+	color: red;
+	text-align: center;
+}
+
+
+
+
+
+
+
+/*big image*/
+.bigimage{
+	min-height: 500px;
+	padding: 150px 0 0;
+ 	background-color: #005BAC;
+ 	vertical-align: middle;
+}
+.bigimage h2{
+	margin: 150px 0 30px;
+}
+.bigimage p{
+	color: white;
+}
+	@media only screen
+		and (max-width: 991px) {
+  		.bigimage {
+    		text-align: center;
+  		}  		
+  		.bigimage h1 {
+    		margin: 20px;
+  		}
+  	}
+
+
+/* Page */
+.page {
+	padding: 50px 0;
+
+	margin: 0 auto;
+	text-align: center;
+	
+}
+.page h2 {
+	text-align: center;
+	margin-top: 50px;
+	margin-bottom: 30px;
+}
+	/* Page About*/
+	#about {
+		background-color: #00ABD8;
+        background-image: linear-gradient(to bottom, #00ABD8,#0070D8);
+		border-top: 20px solid #EFC028;
+		border-bottom: 20px solid #EFC028;
+		text-align: center;
+	}
+	#about h2{
+		color:#EFC028;
+		margin-bottom: 15px;
+	}
+	#about p{
+		color: white;
+		text-align: left;
+	}
+	#about img{
+		width: 150px;
+		margin: 30px;
+	}
+
+
+	/* Page Services */
+	.service {
+		margin: 20px 0;
+		color: #404041;
+	}
+
+	#services .icon {
+		text-align: center;
+		font-family: 'ElegantIcons';
+		font-size: 4em;
+		margin-bottom: 5px;
+		color: #00ABD8;
+	}
+	#services h2, h3{
+		color: #005BAC;
+	}
+
+	#services h3 {
+		margin-bottom: 10px;
+		text-align: center;
+	}
+
+
+
+	/* Download*/
+
+	#download {
+		background-color: #F2572D;
+        background-image: linear-gradient(to bottom,#EFC028, #F2572D);
+        color:white;
+        font-weight: 100;
+        padding: 50px 0 0;
+
+	}	
+
+	#download h2{
+		color:  #F2572D;
+	}
+	#download p{
+		color:white;
+        font-weight: 100;
+	}
+
+
+
+
+
+
+/* Footer Navigation*/
+footer {
+	padding-top: 20px;
+	color: white;
+}
+
+footer .navbar {
+	margin-bottom: 0;
+	min-height: 0;
+}
+
+footer .navbar-default {
+	background-color: transparent;
+	border: none;
+	margin-right: 40px;	
+}
+
+footer .navbar-nav>li a {
+	color: white !important;
+	font-weight: 100;
+}
+
+
+
+/*Data page*/
+
+/*Bill*/
+
+.name{
+	color: #F2572D;
+	text-align: center;
+	padding: 30px 0 0; 
+}
+
+.bill{
+	width: 100%;
+
+	color: #00ABD8;
+	border: 1px solid #00ABD8;
+	border-radius: 10px;
+	padding: 20px;
+	background-color: #fff;
+	text-align: left;
+
+}
+.bill h2{
+	text-align: center;
+	color: #005BAC;
+	font-weight: 700;
+	margin: 10px;
+}
+.bill p{
+	text-align: center;
+	font-size: 0.75em;
+}
+
+.item td:nth-child(2){
+	text-align: right;
+	color: #005BAC;
+	font-weight: 400;
+}
+
+
+
+.itemPrice{
+	float: right;
+}
+.Price{
+	float: right;
+	color: #F2572D;
+	font-weight: 700;
+}
+.subTotal{
+	font-weight: 700;
+	color: #005BAC;
+}
+.total{
+	font-weight: 700;
+	color: #F2572D;
+}
+
+
+
+
+
+.divideButton{
+	width: 33%;
+}
+
+.billDrop{
+	background-color: #eee;
+	padding: 15px;
+	border-radius: 15px; 
+	margin: 0 0 15px;
+}
